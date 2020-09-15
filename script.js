@@ -25,3 +25,13 @@ var questions = {
         correct: "Brandon"
     }
 }
+
+var questionBox = document.querySelector('.content')
+var startQuizBtn = document.querySelector('.start-quiz-button')
+var questionNum = document.querySelector('.question-number')
+var questionText = document.querySelector('.question-text')
+var choicesForm = document.querySelector('form')
+var choicesList = document.querySelector('.choices-list')
+var choicesItem = document.querySelector('li')
+var nextBtn = document.querySelector('nextBtn')
+var prevBtn = document.querySelector('previousBtn')
