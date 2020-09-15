@@ -1,0 +1,28 @@
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+.left-background {
+    position: absolute;
+    background-color: salmon;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    /* background-color: purple; */
+    width: 40%;
+    height: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    padding-top: 6%;
+}
