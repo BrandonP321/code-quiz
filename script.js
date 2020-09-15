@@ -123,6 +123,7 @@ function beginQuiz() {
     // }
 
     startQuizBtn.style.display = 'none';
+    questionBox.style.display = 'block';
     questionNum.style.display = 'block';
     questionText.style.display = 'block';
     choicesForm.style.display = 'block';

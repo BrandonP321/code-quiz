@@ -10,6 +10,26 @@
     float: right;
 }
 
-.question-number, .question-text, .question-text, form, .previousBtn, .nextBtn {
+.content {
     display: none;
+}
+
+.start-quiz-button {
+    display: block;
+    position: absolute;
+    background-color: salmon;
+    width: 20%;
+    height: 10%;
+    border-radius: 60px;
+    border-color: transparent;
+    font-size: 1.5em;
+    top: 45vh;
+    left: 40vw;
+    font-size: 3em;
+    transition: transform .5s;
+}
+
+.start-quiz-button:hover {
+    transform: scale(1.2);
+
 }
