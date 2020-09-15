@@ -49,3 +49,8 @@ h1 {
 .start-quiz-button:focus {
     outline: none;
 }
+
+/* remove underlining when hovering over button */
+.start-quiz-link:hover {
+    text-decoration: none;
+}
