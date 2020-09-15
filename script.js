@@ -19,7 +19,7 @@ var questions = {
     },
     4: {
         question: "What was Albert Einstein's middle name?",
-        choices: ["He didn't have one", "Lukas", "Finn", "Niclas"],
+        choices: ["He has no middle name", "Lukas", "Finn", "Niclas"],
         correct: "He didn't have one",
         answer: false
     },
