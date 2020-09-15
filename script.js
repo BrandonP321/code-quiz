@@ -122,15 +122,38 @@ function beginQuiz() {
     //     return null
     // }
 
-    startQuizBtn.style.display = 'none';
-    questionBox.style.display = 'block';
-    questionNum.style.display = 'block';
-    questionText.style.display = 'block';
-    choicesForm.style.display = 'block';
-    nextBtn.style.display = 'inline';
-    prevBtn.style.display = 'inline';
+    var opacity = 100
+    var waitForButton = setInterval(function() {
+        if (opacity == 0) {
+            clearInterval(waitForButton)
+        } else {
+            opacity -= 1
+            startQuizBtn.style.opacity = opacity / 100;
+        }
+    }, 10)
 
-    showQuestion(1)
+    setTimeout(function() {
+        startQuizBtn.style.display = 'none';
+        questionBox.style.display = 'block';
+        questionNum.style.display = 'block';
+        questionText.style.display = 'block';
+        choicesForm.style.display = 'block';
+        nextBtn.style.display = 'inline';
+        prevBtn.style.display = 'inline';
+
+        opacity = 0
+        var fadeInQuestion = setInterval(function() {
+            if (opacity == 100) {
+                clearInterval(fadeInQuestion)
+            } else {
+                opacity++
+                questionBox.style.opacity = opacity / 100
+            }
+        }, 20)
+    
+        showQuestion(1)
+    }, 1500)
+
 }
 
 // currently using onclick in html until problem is solved
