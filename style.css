@@ -26,3 +26,26 @@ h1 {
     margin-top: 10%;
     padding-top: 6%;
 }
+
+.start-quiz-button {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 20%;
+    border-radius: 40px;
+    margin-top: 5%;
+    background-color: white;
+    border-color: transparent;
+    font-size: 1.5em;
+    transition: transform .5s, background-color .5s;
+}
+
+.start-quiz-button:hover {
+    background-color: salmon;
+    transform: scale(1.2)
+}
+
+/* remove outline when button is clicked or focused on */
+.start-quiz-button:focus {
+    outline: none;
+}
