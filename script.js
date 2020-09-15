@@ -44,6 +44,10 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz'
 var currentQuestion = 1;
 var errorCount = 0;
 
+function submitResults() {
+    
+}
+
 function showQuestion(question) {
     // reset list of choices to nothing
     choicesList.innerHTML = ''
@@ -84,8 +88,16 @@ function nextQuestion() {
         questions[currentQuestion]['answer'] = checkForAnswer();
     }
 
-    currentQuestion++
-    showQuestion(currentQuestion)
+    if (currentQuestion < 4){
+        currentQuestion++
+        showQuestion(currentQuestion)
+    } else if (currentQuestion == 4) {
+        currentQuestion++
+        showQuestion(currentQuestion)
+        nextBtn.textContent = 'Submit'
+    } else {
+        submitResults()
+    }
 }
 
 function prevQuestion() {
@@ -93,8 +105,14 @@ function prevQuestion() {
         questions[currentQuestion]['answer'] = checkForAnswer();
     }
 
-    currentQuestion--
-    showQuestion(currentQuestion);
+    if (currentQuestion != 1 && currentQuestion < 5) {
+        currentQuestion--
+        showQuestion(currentQuestion);
+    } else if (currentQuestion == 5) {
+        currentQuestion--
+        showQuestion(currentQuestion);
+        nextBtn.textContent = 'next'
+    }
 }
 
 function beginQuiz() {
