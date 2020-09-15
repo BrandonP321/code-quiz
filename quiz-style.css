@@ -9,3 +9,7 @@
 .nextBtn {
     float: right;
 }
+
+.question-number, .question-text, .question-text, form, .previousBtn, .nextBtn {
+    display: none;
+}

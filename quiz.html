@@ -27,22 +27,22 @@
     </nav>
 
     <div class='content'>
-        <button class='start-quiz-button'>Begin</button>
-        <h2 class='question-number'>1.</h2>
-        <p class='quetion-text'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus libero odit nemo, ratione beatae quos
-            laboriosam ut asperiores cum molestias distinctio soluta qui sint sunt tempore id, placeat neque minima?
-        </p>
+        <button class='start-quiz-button' onclick='beginQuiz()'>Begin</button>
+        <h2 class='question-number'></h2>
+        <p class='question-text'></p>
         <form>
             <ol type='a' class='choices-list'>
+                <!-- <li>
+                    <label for='test1'>Test</label>
+                    <input id='test1' type='radio' name='question'>
+                </li>
                 <li><input type='radio' name='question'>test</input></li>
                 <li><input type='radio' name='question'>test</input></li>
-                <li><input type='radio' name='question'>test</input></li>
-                <li><input type='radio' name='question'>test</input></li>
+                <li><input type='radio' name='question'>test</input></li> -->
             </ol>
         </form>
-        <button class='previousBtn'>previous</button>
-        <button class='nextBtn'>next</button>
+        <button class='previousBtn' onclick='prevQuestion()'>previous</button>
+        <button class='nextBtn' onclick='nextQuestion()'>next</button>
     </div>
 
     <script src='script.js'></script>
