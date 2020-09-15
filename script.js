@@ -7,7 +7,7 @@ var questions = {
     },
     2: {
         question: "If my birthday is the twenty-first of July and I was born in the year 2000, how old am I?",
-        choices: ['15', '67', "Don't know don't care", '20'],
+        choices: ['15', '67', "Why would I care", '20'],
         correct: '20',
         answer: false
     },
@@ -45,7 +45,7 @@ var currentQuestion = 1;
 var errorCount = 0;
 
 function submitResults() {
-    
+
 }
 
 function showQuestion(question) {
