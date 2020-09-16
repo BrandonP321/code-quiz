@@ -1,10 +1,12 @@
+var leadersListEle = $('.ranks-list')
 var rankings = []
 
 function storeRanks() {
     for (var i = 0; i < localStorage.length; i++) {
-        if (user != 'recentUserScore') {
-            var score = localStorage.getItem(user)
-            rankings.push([user, score])
+        var scoreToDisplay = localStorage.getItem(localStorage.key(i))
+        var userToDisplay = localStorage.key(i)
+        if (userToDisplay != 'recentUserScore') {
+            leadersListEle.append(`<li>${userToDisplay}: ${scoreToDisplay}</li>`)
         }
     }
 }
