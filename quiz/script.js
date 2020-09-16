@@ -21,7 +21,7 @@ var questions = {
     4: {
         question: "What was Albert Einstein's middle name?",
         choices: ["He has no middle name", "Lukas", "Finn", "Niclas"],
-        correct: "He didn't have one",
+        correct: "He has no middle name",
         answer: false
     },
     5: {
@@ -46,8 +46,23 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz'
 var currentQuestion = 1;
 var errorCount = 0;
 
+// determine results and store them in local storage for submition
 function submitResults() {
+    // determine score
+    var totalCorrect = 0;
+    for (var i = 1; i <= 5; i++) {
+        var questionUserChoice = questions[i]['answer']
+        var questionCorrectChoice = questions[i]['correct']
+        if (questionUserChoice == questionCorrectChoice) {
+            totalCorrect += 1;
+        }
+    }
+    var userScore = totalCorrect / 5
 
+    // store score in localStorage
+    localStorage.setItem('recentUserScore', userScore)
+
+    window.location.href = '../leaderboard/leaderboard.html'
 }
 
 function showQuestion(question) {
