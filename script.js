@@ -33,6 +33,7 @@ var questions = {
 
 var questionBox = document.querySelector('.content')
 var startQuizBtn = document.querySelector('.start-quiz-button')
+// var startQuizBtn = $('.start-quiz-button')
 var questionNum = document.querySelector('.question-number')
 var questionText = document.querySelector('.question-text')
 var choicesForm = document.querySelector('form')
@@ -131,6 +132,8 @@ function beginQuiz() {
             startQuizBtn.style.opacity = opacity / 100;
         }
     }, 10)
+
+    
 
     setTimeout(function() {
         startQuizBtn.style.display = 'none';
