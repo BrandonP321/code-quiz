@@ -57,3 +57,21 @@ h1 {
 .start-quiz-link:hover {
     text-decoration: none;
 }
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: salmon;
+    }
+
+    .content {
+        position: relative;
+        top: 10vh;
+        left: auto;
+        margin: 0 auto;
+        width: 90vw;
+    }
+
+    .start-quiz-button {
+        margin-top: 10%;
+    }
+}
