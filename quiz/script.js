@@ -63,8 +63,8 @@ function submitResults() {
     // store score in localStorage
     localStorage.setItem('recentUserScore', userScore)
 
-    window.location.href = '../leaderboard/leaderboard.html'
-    // window.location.href = 'https://brandonp321.github.io/code-quiz/leaderboard/Leaderboard.html'
+    // window.location.href = '../leaderboard/leaderboard.html'
+    window.location.href = 'https://brandonp321.github.io/code-quiz/leaderboard/Leaderboard.html'
 }
 
 function showQuestion(question) {
