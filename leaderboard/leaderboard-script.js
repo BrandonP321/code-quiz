@@ -7,6 +7,8 @@ var rankings = []
 var sortedRanks;
 
 function displayRanks() {
+    rankings = []
+    sortedRanks = []
     for (var i = 0; i < localStorage.length; i++) {
         // retrieve score of player key(i) in local storage
         var scoreToDisplay = localStorage.getItem(localStorage.key(i))
