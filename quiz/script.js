@@ -57,6 +57,7 @@ function submitResults() {
             totalCorrect += 1;
         }
     }
+    // calculate 
     var userScore = totalCorrect / 5 * 100
 
     // store score in localStorage

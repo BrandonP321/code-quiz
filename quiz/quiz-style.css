@@ -3,6 +3,7 @@ label {
 }
 
 .content {
+    display: none;
     position: relative;
     width: 30vw;
     height: 60vh;
@@ -14,11 +15,6 @@ label {
     border-radius: 20px;
     font-size: 1.5em;
     opacity: 0;
-}
-
-
-.content {
-    display: none;
 }
 
 .start-quiz-button {
@@ -66,4 +62,25 @@ label {
 
 .previousBtn:focus, .nextBtn:focus {
     outline: none;
+}
+
+@media screen and (orientation: portrait) {
+    .content {
+        height: 80vh;
+        min-width: auto;
+        width: 95%;
+    }
+
+    body {
+        padding: 3%;
+    }
+
+    .start-quiz-button {
+        position: relative;
+        top: 30vh;
+        left: auto;
+        width: 250px;
+        height: 70px;
+        margin: 0 auto;
+    }
 }
