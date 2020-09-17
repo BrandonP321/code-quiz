@@ -42,6 +42,7 @@ ol {
 }
 
 .add-score-div {
+    display: none;
     top: 30%;
     font-size: 2em;
     /* display: none; */
