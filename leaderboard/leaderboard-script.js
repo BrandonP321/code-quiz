@@ -4,6 +4,7 @@ var usernameInput = $('.username-input')
 var addScoreBtn = $('.add-score-btn')
 var recentScore = localStorage.getItem('recentUserScore')
 var rankings = []
+var sortedRanks;
 
 function displayRanks() {
     for (var i = 0; i < localStorage.length; i++) {
@@ -13,8 +14,17 @@ function displayRanks() {
         var userToDisplay = localStorage.key(i)
         // if the user score isn't the player's recent score from the quiz, append it to the on page list
         if (userToDisplay != 'recentUserScore') {
-            leadersListEle.append(`<li>${userToDisplay}: ${scoreToDisplay}</li>`)
+            // leadersListEle.append(`<li>${userToDisplay}: ${scoreToDisplay}</li>`)
+            rankings.push([parseInt(scoreToDisplay), userToDisplay])
         }
+    }
+    console.log(rankings)
+    leadersListEle.empty();
+    // sort and iterate through list of player scores and print them to leaderboard
+    sortedRanks = rankings.sort(([a, b], [c, d]) => c - a || b - d)
+    console.log(sortedRanks)
+    for (var i = 0; i < sortedRanks.length; i++) {
+        leadersListEle.append(`<li>${sortedRanks[i][1]}: ${sortedRanks[i][0]}%</li>`)
     }
 }
 
@@ -23,7 +33,7 @@ function displayRecentScore() {
     if (recentScore !== 'none') {
         $('.add-score-div').css('display', 'block')
         console.log('recent score: ' + recentScore)
-        userScoreEle.text(recentScore * 100 + '%')
+        userScoreEle.text(recentScore + '%')
     }
 }
 
@@ -37,9 +47,9 @@ function addUserScore() {
     localStorage.setItem('recentUserScore', 'none')
 }
 
-localStorage.setItem('brp321', 35)
-localStorage.setItem('brandon', 30)
-localStorage.setItem('theman', 20)
+localStorage.setItem('Beanman321', 40)
+localStorage.setItem('gooseman310', 80)
+localStorage.setItem('johnny', 20)
 
 addScoreBtn.on('click', function() {
     addUserScore();

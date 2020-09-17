@@ -57,7 +57,7 @@ function submitResults() {
             totalCorrect += 1;
         }
     }
-    var userScore = totalCorrect / 5
+    var userScore = totalCorrect / 5 * 100
 
     // store score in localStorage
     localStorage.setItem('recentUserScore', userScore)
