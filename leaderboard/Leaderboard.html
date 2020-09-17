@@ -12,38 +12,39 @@
 
 <body>
 
-    <div class='bg-salmon'>
-        <div class='leader-div'>
-            <h1 class='leaderboard-heading'>Leaderboard</h1>
-            <ol class='ranks-list'></ol>
-        </div>
-    </div>
-    <div class='right-half-screen'>
-        <div class='add-score-div'>
-            <h1>Score: <span class='user-score'></span></h1>
-            <h2>Congrats on the new score!</h2>
-            <p>Enter your username to add it to the leaderboard</p>
-            <input class='username-input' type='text'>
-            <button class='add-score-btn'>Add Score</button>
-        </div>
-    </div>
-
-    
+    <!-- bootstrap navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand" href="../index.html">Code Quiz</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="../quiz/quiz.html">Take Quiz</a>
-                <a class="nav-link" href="Leaderboard.html">Leaderboard</a>
-            </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link" href="../quiz/quiz.html">Take Quiz</a>
+            <a class="nav-link" href="Leaderboard.html">Leaderboard</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
+<!-- left half of screen containing leaderboard ranks -->
+<div class='bg-salmon'>
+    <div class='leader-div'>
+        <h1 class='leaderboard-heading'>Leaderboard</h1>
+        <ol class='ranks-list'></ol>
+    </div>
+</div>
 
+<!-- right half of screen displaying user's most recent score -->
+<div class='right-half-screen'>
+    <div class='add-score-div'>
+        <h1>Score: <span class='user-score'></span></h1>
+        <h2>Congrats on the new score!</h2>
+        <p>Enter your username to add it to the leaderboard</p>
+        <input class='username-input' type='text'>
+        <button class='add-score-btn'>Add Score</button>
+    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -1,3 +1,4 @@
+/* style for left half of background */
 .bg-salmon {
     position: absolute;
     background-color: salmon;
@@ -8,18 +9,15 @@
     z-index: -1;
 }
 
+/* styling for right half of background */
 .right-half-screen {
     position: absolute;
-    background-color: pink;
+    /* background-color: pink; */
     width: 50vw;
     height: 100vh;
     top: 0;
     right: 0;
     z-index: -1;
-}
-
-.leader-div {
-
 }
 
 h1 {
@@ -30,25 +28,53 @@ li {
     font-size: 2em;
 }
 
-ol {
-
-}
-
+/* styling of input and leaderboard elements */
 .add-score-div, .leader-div {
     display: inline-block;
     position: relative;
     margin-top: 15vh;
     left: 20%;
+    width: 50%;
 }
 
 .add-score-div {
     display: none;
-    top: 30%;
     font-size: 2em;
-    /* display: none; */
-    /* background-color: white; */
 }
 
 h2 {
     font-size: 1.5em;
+}
+
+/* styling for when screen is vertical */
+@media screen and (orientation: portrait) {
+
+    .right-half-screen, .bg-salmon {
+        position: relative;
+        width: 100vw;
+        top: auto;
+        left: auto;
+        padding-top: 5%;
+    }
+
+    .right-half-screen {
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .add-score-div, .leader-div {
+        left: auto;
+        top: 10%;
+        margin-top: auto;
+    }
+
+    .add-score-div {
+        font-size: 1em;
+        text-align: center;
+        margin: auto auto;
+    }
+
+    .leader-div {
+        margin-left: 2%;
+    }
 }

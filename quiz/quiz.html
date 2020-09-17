@@ -12,6 +12,7 @@
 
 <body>
 
+    <!-- bootstrap navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand" href="../index.html">Code Quiz</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -26,22 +27,19 @@
         </div>
     </nav>
 
+    <!-- button to begin quiz -->
     <button class='start-quiz-button'>Begin</button>
 
+    <!-- block containing question details -->
     <div class='content'>
         <h2 class='question-number'></h2>
         <p class='question-text'></p>
         <form>
+            <!-- list to append question choices to -->
             <ol type='a' class='choices-list'>
-                <!-- <li>
-                    <label for='test1'>Test</label>
-                    <input id='test1' type='radio' name='question'>
-                </li>
-                <li><input type='radio' name='question'>test</input></li>
-                <li><input type='radio' name='question'>test</input></li>
-                <li><input type='radio' name='question'>test</input></li> -->
             </ol>
         </form>
+        <!-- next/previous buttons to move between questions -->
         <button class='previousBtn' onclick='prevQuestion()'>previous</button>
         <button class='nextBtn' onclick='nextQuestion()'>next</button>
     </div>

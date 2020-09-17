@@ -1,7 +1,9 @@
+/* give labels for each choice room from radio circle */
 label {
     margin-right: 5%;
 }
 
+/* set questions to be invisible until user begins test */
 .content {
     display: none;
     position: relative;
@@ -17,6 +19,7 @@ label {
     opacity: 0;
 }
 
+/* button to start quiz with transitions */
 .start-quiz-button {
     display: block;
     position: absolute;
@@ -36,6 +39,7 @@ label {
     transform: scale(1.2);
 }
 
+/* keep next and previous buttons at bottom of screen */
 .nextBtn {
     right: 4%;
     bottom: 4%;
@@ -56,14 +60,16 @@ label {
     transition: transform .5s;
 }
 
+/* transitions when hovering over next/previous buttons */
 .previousBtn:hover, .nextBtn:hover {
     transform: scale(1.2);
 }
 
-.previousBtn:focus, .nextBtn:focus {
+.previousBtn:focus, .nextBtn:focus, .start-quiz-button:focus {
     outline: none;
 }
 
+/* responsive design for when screen is vertical */
 @media screen and (orientation: portrait) {
     .content {
         height: 80vh;
